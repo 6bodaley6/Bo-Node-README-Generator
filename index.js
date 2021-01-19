@@ -1,11 +1,9 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const util = require("util");
 const path = require("path");
 const generateMarkdown = require("./utils/generateMarkdown");
 // TODO: Create an array of questions for user input
-const questions = [];
 function promptUser() {
   return inquirer
     .prompt([
@@ -33,7 +31,7 @@ function promptUser() {
       {
         type: "input",
         message: "Who contributed on this project?",
-        name: "contribution",
+        name: "credits",
       },
       {
         type: "checkbox",
@@ -43,13 +41,18 @@ function promptUser() {
       },
       {
         type: "input",
-        message: "Anyone acredited on this work?",
-        name: "credit",
+        message: "How does somone contribute to your project?",
+        name: "contributing",
       },
       {
         type: "input",
         message: "What is your Github username",
         name: "username",
+      },
+      {
+        type: "input",
+        message: "What tests do you have to test your project",
+        name: "tests",
       },
     ])
     .then(function (userAnswers) {
@@ -70,6 +73,4 @@ function writeToFile(fileName, data) {
 function init() {
   promptUser();
 }
-
-// Function call to initialize app
 init();

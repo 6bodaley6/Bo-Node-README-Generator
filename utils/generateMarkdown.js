@@ -37,12 +37,25 @@ ${renderLicenseBadge(data.license)}
 ${data.description}
 ## Table Of Contents
 * [Installation](#installation)
+* [Usage](#Usage)
+* [Credits](#Credits)
+* [Contributing](#Contributing)
+* [Tests](#Tests)
+* [Questions](#Questions)
 ${renderLicenseLink(data.license)}
-//!! add links for table of contents line 20 below description
 ## Installation
 ${data.installation}
 ${renderLicenseSection(data.license)}
-//!! add rest of prompts
+## Usage
+${data.usage}
+## Credits
+${data.credits}
+## Contributing
+${data.contributing}
+## Tests
+${data.tests}
+## Questions
+${data.username}
   `;
 }
 
